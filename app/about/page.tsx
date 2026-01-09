@@ -10,7 +10,7 @@ const highlights = [
     description: "Guided cues help you stay focused and reduce cognitive overload.",
   },
   {
-    title: "Progress you can see",
+    title: "Progress you can touch",
     description: "Track modules completed and stay motivated through milestones.",
   },
 ];
