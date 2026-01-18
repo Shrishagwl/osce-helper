@@ -1,26 +1,18 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import TopNav from "./components/TopNav";
-import { scenarios } from "./lib/scenarios";
-import { Manrope, Newsreader } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Providers from "./providers";
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  variable: "--font-newsreader",
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "OSCE Helper",
+  title: "AI-OSCE Platform",
   description:
-    "Modern OSCE practice with realistic simulated patients, clear feedback, and structured study workflows.",
+    "AI-OSCE platform for clinical simulation practice, feedback, and cohort analytics.",
 };
 
 export default function RootLayout({
@@ -31,23 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${manrope.variable} ${newsreader.variable} antialiased min-h-full text-slate-900`}
+        className={`${inter.variable} min-h-full bg-slate-50 font-sans text-slate-900 antialiased transition-colors dark:bg-slate-950 dark:text-slate-100`}
       >
-        <div className="min-h-screen">
-          <TopNav defaultScenarioId={scenarios[0]?.id} />
-          <main>{children}</main>
-          <footer className="border-t border-slate-100 bg-white">
-            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-              <p className="font-medium text-slate-600">OSCE Helper</p>
-              <p>
-                Educational role-play only. Not for real patient care or medical advice.
-              </p>
-              <Link href="/about" className="text-slate-600 hover:text-slate-900">
-                Our mission
-              </Link>
-            </div>
-          </footer>
-        </div>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
