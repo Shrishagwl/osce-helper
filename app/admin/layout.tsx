@@ -1,5 +1,5 @@
-import RoleGate from "../components/shared/RoleGate";
+import AdminLayout from "../components/layouts/AdminLayout";
 
 export default function AdminGroupLayout({ children }: { children: React.ReactNode }) {
-  return <RoleGate allowed={["admin"]}>{children}</RoleGate>;
+  return <AdminLayout>{children}</AdminLayout>;
 }

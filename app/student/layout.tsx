@@ -1,5 +1,5 @@
-import RoleGate from "../components/shared/RoleGate";
+import StudentLayout from "../components/layouts/StudentLayout";
 
 export default function StudentGroupLayout({ children }: { children: React.ReactNode }) {
-  return <RoleGate allowed={["student"]}>{children}</RoleGate>;
+  return <StudentLayout>{children}</StudentLayout>;
 }
