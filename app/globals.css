@@ -1,27 +1,7 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f7fafc;
-  --foreground: #0f172a;
-  --surface: #ffffff;
-  --surface-muted: #f1f5f9;
-  --text-muted: #5b677a;
-  --brand-50: #e6fbfd;
-  --brand-100: #c3f3f7;
-  --brand-500: #0ea5a6;
-  --brand-600: #0b8f94;
-  --brand-700: #0a7a80;
-  --accent-500: #2563eb;
-  --accent-600: #1d4ed8;
-  --ring: rgba(14, 165, 166, 0.35);
-  --radius: 18px;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-manrope);
-  --font-display: var(--font-newsreader);
+  --font-sans: var(--font-inter);
 }
 
 * {
@@ -30,36 +10,21 @@
 
 html {
   height: 100%;
-  color-scheme: light;
+  scroll-behavior: smooth;
+  color-scheme: light dark;
 }
 
 body {
-  min-height: 100%;
   margin: 0;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, #e5f6f8 0%, rgba(229, 246, 248, 0) 60%),
-    radial-gradient(900px 500px at 90% 5%, #e3edff 0%, rgba(227, 237, 255, 0) 55%),
-    #f7fafc;
-  color: var(--foreground);
-  font-family: var(--font-manrope), "Manrope", "Segoe UI", sans-serif;
-  line-height: 1.6;
-}
-
-h1,
-h2,
-h3,
-h4,
-.font-display {
-  font-family: var(--font-newsreader), var(--font-manrope), serif;
-  letter-spacing: -0.02em;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 ::selection {
-  background: rgba(14, 165, 166, 0.2);
-  color: #0f172a;
+  background: rgba(59, 130, 246, 0.2);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }

@@ -1,0 +1,38 @@
+export const students = [
+  {
+    id: "student-001",
+    name: "Sarah Jenkins",
+    program: "Bachelor of Nursing",
+    status: "Active",
+    risk: "Monitor",
+    cohortId: "cohort-2023-a",
+    lastActive: "2024-11-08",
+  },
+  {
+    id: "student-002",
+    name: "Marcus Johnson",
+    program: "Clinical Medicine",
+    status: "Active",
+    risk: "Moderate",
+    cohortId: "cohort-2023-a",
+    lastActive: "2024-11-07",
+  },
+  {
+    id: "student-003",
+    name: "Emily Chen",
+    program: "Allied Health",
+    status: "At Risk",
+    risk: "Critical",
+    cohortId: "cohort-2023-b",
+    lastActive: "2024-11-02",
+  },
+  {
+    id: "student-004",
+    name: "Liam Patel",
+    program: "Paramedicine",
+    status: "Active",
+    risk: "Low",
+    cohortId: "cohort-2023-b",
+    lastActive: "2024-11-09",
+  },
+];
